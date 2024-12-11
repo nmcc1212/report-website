@@ -9,6 +9,7 @@ import LoginPage from "./app/Login.tsx";
 import RegisterPage from "./app/Register.tsx";
 import TwoFAPage from "./app/2fa.tsx";
 import NewTransactionPage from "./app/NewTransaction.tsx";
+import TransactionsPage from "./app/Transactions.tsx";
 import { TooltipProvider } from "./components/ui/tooltip.tsx";
 import { ThemeProvider } from "./components/theme-provider.tsx";
 
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/2fa" element={<TwoFAPage />} />
             <Route path="/new-transaction" element={<NewTransactionPage />} />
+            <Route path="/transactions" element={<TransactionsPage />} />
           </Routes>
         </Router>
       </ThemeProvider>
