@@ -65,9 +65,9 @@ const tailwindConfig = {
   			'caret-blink': 'caret-blink 1.25s ease-out infinite'
   		}
   	}
-  },,
+  },
   // plugins: [require("tailwindcss-animate")],
-    plugins: [require("tailwindcss-animate")]
+    plugins: [import("tailwindcss-animate")]
 };
 
 export default tailwindConfig;
