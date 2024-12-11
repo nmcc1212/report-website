@@ -1,4 +1,4 @@
-import Dashboard from "@/components/authentication-02"
+import Dashboard from "@/components/authentication-04"
 
 export default function LoginPage() {
   return (

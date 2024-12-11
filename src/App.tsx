@@ -27,6 +27,7 @@ function App() {
         <a href="/new-transaction" className="text-blue-500">
           Go to new transaction
         </a>
+        <br />
         <a href="/transactions" className="text-blue-500">
           Go to transactions
         </a>

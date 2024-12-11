@@ -56,7 +56,7 @@ export default function Dashboard() {
             href="#"
             className="text-foreground transition-colors hover:text-foreground"
           >
-            UID Dashboard
+            SmartLedger
           </a>
           <a
             href="#"
@@ -104,7 +104,7 @@ export default function Dashboard() {
                 <span className="sr-only">Acme Inc</span>
               </a>
               <a href="#" className="hover:text-foreground">
-                UID Dashboard
+                SmartLedger
               </a>
               <a
                 href="#"
@@ -144,7 +144,7 @@ export default function Dashboard() {
               />
             </div>
           </form>
-          <ModeToggle/>
+          <ModeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full">

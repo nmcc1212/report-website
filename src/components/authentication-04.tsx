@@ -1,9 +1,6 @@
-import Image from "next/image"
-import Link from "next/link"
-
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function Dashboard() {
   return (
@@ -29,12 +26,12 @@ export default function Dashboard() {
             <div className="grid gap-2">
               <div className="flex items-center">
                 <Label htmlFor="password">Password</Label>
-                <Link
+                <a
                   href="/forgot-password"
                   className="ml-auto inline-block text-sm underline"
                 >
                   Forgot your password?
-                </Link>
+                </a>
               </div>
               <Input id="password" type="password" required />
             </div>
@@ -47,15 +44,15 @@ export default function Dashboard() {
           </div>
           <div className="mt-4 text-center text-sm">
             Don&apos;t have an account?{" "}
-            <Link href="#" className="underline">
+            <a href="#" className="underline">
               Sign up
-            </Link>
+            </a>
           </div>
         </div>
       </div>
       <div className="hidden bg-muted lg:block">
-        <Image
-          src="/placeholder.svg"
+        <img
+          src="http://www.hollyswinton.co.uk/wp-content/uploads/nmstock18.jpg"
           alt="Image"
           width="1920"
           height="1080"
@@ -63,5 +60,5 @@ export default function Dashboard() {
         />
       </div>
     </div>
-  )
+  );
 }
