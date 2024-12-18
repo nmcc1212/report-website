@@ -45,7 +45,9 @@ export default function Dashboard() {
                 onChange={handleEmailChange}
                 required
               />
-              {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
+              {emailError && (
+                <p className="text-red-500 text-sm">{emailError}</p>
+              )}
             </div>
             <div className="grid gap-2">
               <div className="flex items-center">

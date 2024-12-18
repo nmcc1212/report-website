@@ -1,21 +1,23 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function Dashboard() {
   return (
     <div className="w-full flex justify-center py-12">
       <div className="mx-auto grid w-[350px] gap-6">
         {/* App name added here */}
-        <h1 className="text-4xl font-bold text-blue-600 text-center">SmartLedger</h1>
-        
+        <h1 className="text-4xl font-bold text-blue-600 text-center">
+          SmartLedger
+        </h1>
+
         <Card>
           <CardHeader>
             <CardTitle className="text-xl">Sign Up</CardTitle>
@@ -65,5 +67,5 @@ export default function Dashboard() {
         </Card>
       </div>
     </div>
-  )
+  );
 }

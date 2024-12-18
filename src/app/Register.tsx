@@ -5,5 +5,5 @@ export default function RegisterPage() {
     <div className="flex h-screen w-full items-center justify-center px-4">
       <Dashboard />
     </div>
-  )
+  );
 }

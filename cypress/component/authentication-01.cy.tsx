@@ -12,7 +12,7 @@ describe("Two-Factor Authentication Dashboard", () => {
 
     // Check for the description
     cy.contains(
-      "Enter the 6-digit code sent to your email or phone to proceed."
+      "Enter the 6-digit code sent to your email or phone to proceed.",
     ).should("exist");
 
     // Check for the Authentication Code label
