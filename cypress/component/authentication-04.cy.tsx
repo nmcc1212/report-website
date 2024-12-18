@@ -1,9 +1,10 @@
 import Dashboard from "@/components/authentication-04";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Dashboard - Login Form", () => {
   beforeEach(() => {
     // Visit the page before each test
-    cy.mount(<Dashboard />);
+    cy.mount(<BrowserRouter><Dashboard /></BrowserRouter>);
   });
 
   it("should allow user to input email and password", () => {
@@ -36,5 +37,28 @@ describe("Dashboard - Login Form", () => {
 
     // Ensure the error message does not appear
     cy.get("p.text-red-500").should("not.exist");
+  });
+
+  it("should show an error message for invalid credentials", () => {
+    // Type an invalid email
+    cy.get("input#email").type("invalid@example.com");
+    cy.get("input#password").type("invalid-password");
+    cy.get('.bg-primary').click();
+
+
+    // Check if the error message appears
+    cy.get("p.text-red-500")
+      .should("be.visible")
+      .and("contain.text", "Invalid email or password. Please try again.");
+  });
+  it("should not show an error message for valid credentials", () => {
+    // Type a valid email
+    cy.get("input#email").type("valid@example.com");
+    cy.get("input#password").type("password");
+    cy.get('.bg-primary').click();
+
+    // Ensure the error message does not appear
+    cy.get("p.text-red-500").should("not.exist");
+
   });
 });

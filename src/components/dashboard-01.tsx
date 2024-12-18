@@ -231,7 +231,7 @@ export default function Dashboard() {
                 </CardDescription>
               </div>
               <Button asChild size="sm" className="ml-auto gap-1">
-                <a href="#">
+                <a href="/new-transaction" cy-data="new-transaction">
                   New Transaction
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
@@ -363,7 +363,7 @@ export default function Dashboard() {
             <CardHeader>
               <CardTitle>Recent Sales</CardTitle>
               <Button asChild size="sm" className="ml-auto gap-1">
-                <a href="#">
+                <a href="/new-transaction">
                   New Transaction
                   <ArrowUpRight className="h-4 w-4" />
                 </a>

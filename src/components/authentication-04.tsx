@@ -2,10 +2,13 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useNavigate } from "react-router";
 
 export default function Dashboard() {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [password, setPassword] = useState("");
+  const [invalidLogin, setInvalidLogin] = useState(false);
 
   // Email validation function
   const validateEmail = (email: string) => {
@@ -22,6 +25,23 @@ export default function Dashboard() {
       setEmailError("");
     }
   };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  }
+
+  const navigate = useNavigate();
+  const isValidLogin = () => {
+    if (email == "valid@example.com" && password == "password") {
+      navigate("/home");
+    }
+    else {
+      setInvalidLogin(true);
+    }
+  }
+
+
+
 
   return (
     <div className="w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px]">
@@ -59,9 +79,14 @@ export default function Dashboard() {
                   Forgot your password?
                 </a>
               </div>
-              <Input id="password" type="password" required />
+              <Input id="password" type="password" required onChange={handlePasswordChange} />
             </div>
-            <Button type="submit" className="w-full">
+            {invalidLogin && (
+              <p className="text-red-500 text-sm">
+                Invalid email or password. Please try again.
+              </p>
+            )}
+            <Button type="submit" className="w-full" onClick={isValidLogin}>
               Login
             </Button>
             <Button variant="outline" className="w-full">
@@ -70,7 +95,7 @@ export default function Dashboard() {
           </div>
           <div className="mt-4 text-center text-sm">
             Don&apos;t have an account?{" "}
-            <a href="#" className="underline">
+            <a href="/register" className="underline">
               Sign up
             </a>
           </div>
@@ -79,7 +104,7 @@ export default function Dashboard() {
       <div className="hidden bg-muted lg:block">
         <img
           src="http://www.hollyswinton.co.uk/wp-content/uploads/nmstock18.jpg"
-          alt="Image"
+          alt="books"
           width="1920"
           height="1080"
           className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
