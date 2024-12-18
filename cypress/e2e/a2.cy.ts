@@ -13,7 +13,6 @@ describe('login and create transaction', () => {
     cy.get('#name').type('invoice number 3');
     cy.get('#description').type('invoice number 3 description');
     cy.get('.hidden > .bg-primary').click(); // save button
-    /* ==== End Cypress Studio ==== */
   });
   it('invalid login', function() {
     cy.visit('http://localhost:5173/login');
