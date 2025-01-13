@@ -59,7 +59,7 @@ export default function Dashboard() {
             </div>
             <div className="mt-4 text-center text-sm">
               Already have an account?{" "}
-              <a href="#" className="underline">
+              <a href="/login" className="underline">
                 Sign in
               </a>
             </div>

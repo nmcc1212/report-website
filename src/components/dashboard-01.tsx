@@ -65,10 +65,10 @@ export default function Dashboard() {
             Orders
           </a>
           <a
-            href="#"
+            href="/transactions"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
-            Products
+            Transactions
           </a>
           <a
             href="#"

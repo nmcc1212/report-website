@@ -213,13 +213,13 @@ export default function Dashboard() {
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <a href="#">Dashboard</a>
+                  <a href="/home">Dashboard</a>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <a href="#">Transactions</a>
+                  <a href="/transactions">Transactions</a>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
